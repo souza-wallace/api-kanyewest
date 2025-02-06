@@ -18,7 +18,9 @@ RUN npm install
 COPY . .
 
 # Copiar configuração do Nginx
-COPY ./docker/nginx/default.conf /etc/nginx/nginx.conf
+# COPY ./docker/nginx/default.conf /etc/nginx/nginx.conf
+COPY ./docker/nginx/default.conf /etc/nginx/conf.d/default.conf
+
 
 # Copiar arquivo de configuração do supervisord
 COPY ./docker/supervisord.conf /etc/supervisord.conf
