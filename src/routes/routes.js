@@ -10,7 +10,7 @@ const mainController = new MainController(new Utils, env)
 
 router.get('/api/', mainController.get);
 
-router.get('/hs', (req, res) => {
+router.get('/api/hs', (req, res) => {
     res.status(200).json({
         message: 'On'
     });     
