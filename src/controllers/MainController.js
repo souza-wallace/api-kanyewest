@@ -10,6 +10,7 @@ export class MainController {
         console.log(message)
 
         res.status(200).json({
+            host: req.get('host'),
             message: message.quote
         });    
     };
